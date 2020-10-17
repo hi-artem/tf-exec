@@ -1,4 +1,5 @@
 node_modules
 .terraform
 *.tfstate
-test.txt
+*.tfstate.backup
+test*.txt

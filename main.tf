@@ -1,4 +1,5 @@
 resource "local_file" "test_file" {
-  content     = ""
-  filename = "${path.module}/test.txt"
+  count    = 10
+  content  = "this is test file number ${count.index}"
+  filename = "${path.module}/test_${count.index}.txt"
 }
