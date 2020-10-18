@@ -1,6 +1,7 @@
 const { worker } = require('cluster');
 
 fs = require('fs');
+var tool = require('./tf-path-finder/findPath');
 
 let exec = require('child_process').exec;
 
@@ -62,8 +63,13 @@ function os_func() {
 }
 
 console.log('======================= Running Validate =======================');
-var os = new os_func();
+// var os = new os_func();
 
-os.execCommand('SomeCommand', function (returnvalue) {
-    // Here you can get the return value
+// os.execCommand('SomeCommand', function (returnvalue) {
+//     // Here you can get the return value
+// });
+
+var path = new tool.terraform();
+path.find_path('which terraform', function (returnvalue) {
+    console.log(returnvalue);
 });

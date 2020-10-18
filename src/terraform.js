@@ -1,4 +1,5 @@
-const tf = process.env.TF_PATH || '/usr/local/bin/terraform'
+const tfpath = require("./tfpath.json")
+const tf = process.env.TF_PATH || tfpath.path
 
 const execute = require('./exec')
 
