@@ -63,11 +63,7 @@ function os_func() {
 }
 
 console.log('======================= Running Validate =======================');
-// var os = new os_func();
 
-// os.execCommand('SomeCommand', function (returnvalue) {
-//     // Here you can get the return value
-// });
 
 var path = new tool.terraform();
 path.find_path('which terraform', function (returnvalue) {
