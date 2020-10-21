@@ -1,1 +1,3 @@
-{"path":"/usr/bin/terraform"}
+{
+  "path": "/usr/local/bin/terraform"
+}
