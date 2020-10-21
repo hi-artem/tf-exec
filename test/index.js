@@ -57,7 +57,7 @@ describe('Workflow: init, plan -out=test.plan, apply, destroy', () => {
     return terraform.destroy(terraformProjectPath)
   })
 
-  it('It runs plan and applies the plan from the output file', () => {
+  it('It applies the plan from the output file', () => {
     return terraform.apply(terraformProjectPath, 'test.plan -no-color').then((result) => {
       assert.notStrictEqual(result.stdout, '')
       assert.strictEqual(result.stderr, '')
