@@ -3,12 +3,6 @@ const terraform = require('./src/terraform')
 let tempPath = '/home/user/Escritorio/pathtest/'
 
 const main = async () => {
-  // let result = await terraform.version()
-  // console.log(result)
-  // result = await terraform.init()
-  // console.log(result)
-  // result = await terraform.plan()
-  // console.log(result)
   let resultInit = await terraform.init(tempPath)
   console.log(resultInit)
   if(resultInit.stderr) {
